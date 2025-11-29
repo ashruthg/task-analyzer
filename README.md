@@ -1,4 +1,4 @@
-# Smart Task Analyzer — Submission (task-analyzer)
+# Smart Task Analyzer
 
 
 **Status:** Standalone scoring module + frontend demo. Django project structure provided as placeholders (non-running).
@@ -35,3 +35,21 @@ I documented assumptions and design decisions below.
 python -m venv venv
 source venv/bin/activate # macOS / Linux
 venv\Scripts\activate # Windows
+```
+3. Install dependencies (only for tests):
+
+```
+pip install -r requirements.txt
+```
+Run the sample script to test scoring (standalone):
+```
+python -c "from backend.tasks.scoring import analyze_tasks; print(analyze_tasks([{'title':'Test','due_date':'2025-12-01','importance':8,'estimated_hours':2,'dependencies':[]}]))"
+```
+
+How to view the frontend demo
+
+Open frontend/index.html in your browser (double-click or open it).
+
+Paste a JSON array of tasks (example provided in the UI) or add tasks in the form.
+
+Click "Analyze" to see the sorted results and explanations. The frontend calls a mock function that uses the same scoring logic shipped in scoring.py.
