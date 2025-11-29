@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart Task Analyzer - Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Smart Task Analyzer (Demo)</h1>
+      <p>Paste a JSON array of tasks or add one by one and click Analyze.</p>
+    </header>
+
+    <main class="grid">
+      <section class="left">
+        <h2>Input</h2>
+        <textarea id="taskInput" rows="12"></textarea>
+        <div class="controls">
+          <button id="loadExample">Load Example</button>
+          <button id="analyzeBtn">Analyze</button>
+        </div>
+      </section>
+
+      <section class="right">
+        <h2>Results</h2>
+        <div id="results"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
